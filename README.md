@@ -1,5 +1,5 @@
 # CloudStorageSystem
-Server and Client code of a cloud storage system
+Server and Client code of a cloud storage system based on **gRPC** and **Go**
 
 ## Usage
 1. Run the server:
@@ -15,6 +15,7 @@ go run cmd/SurfstoreServerExec/main.go -s <service> -p <port> -l -d (BlockStoreA
 2. Run the client:
 ```shell
 go run cmd/SurfstoreClientExec/main.go -d <meta_addr:port> <base_dir> <block_size>
+```
 - `meta_addr:port`: The IP address and port number of the Meta Server
 - `base_dir`: This option indicates the directory to be synchronized with the cloud.
 - `block_size`: This is the size of blocks stored on Block Store Server. Note that we make this size a mutable option in the command for the convenience of testing different sizes. But once you start your server, you should fix the block_size. If you want to change the block size, you need to restart the server.
